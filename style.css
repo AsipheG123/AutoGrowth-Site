@@ -542,3 +542,34 @@ h2 span {
         text-decoration: none;
         margin-left: 15px;
     }
+/* Logo image sizing & alignment */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+    .navbar .logo img {
+        height: 44px;
+        width: auto;
+        display: block;
+    }
+
+/* Make the primary button text white and keep it white on hover */
+.btn.btn-primary,
+.btn.btn-primary:link,
+.btn.btn-primary:visited {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+    .btn.btn-primary:hover,
+    .btn.btn-primary:focus {
+        color: #fff !important;
+        filter: brightness(0.95);
+    }
+
+/* Ensure primary button has your green (adjust if you use a different token) */
+.btn.btn-primary {
+    background: #00a86b;
+    border-color: #00a86b;
+}
