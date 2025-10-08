@@ -429,7 +429,6 @@ h2 span {
     gap: 15px;
 }
 
-    /* Social icons – size & spacing */
     .social-icons img {
         width: 28px;
         height: 28px;
@@ -437,6 +436,8 @@ h2 span {
         display: inline-block;
         vertical-align: middle;
         opacity: 0.9;
+        filter: invert(1) brightness(1.4); /* makes them white if PNGs are black */
+        transition: opacity 0.2s ease;
     }
 
         .social-icons img:hover {
