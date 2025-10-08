@@ -548,11 +548,20 @@ h2 span {
     align-items: center;
 }
 
+    /* Larger, cleaner logo */
     .navbar .logo img {
-        height: 44px;
+        height: 70px; /* increase or decrease this until it feels right */
         width: auto;
         display: block;
+        object-fit: contain;
     }
+
+/* Slightly smaller on tablets/phones */
+@media (max-width: 768px) {
+    .navbar .logo img {
+        height: 55px;
+    }
+}
 
 /* Make the primary button text white and keep it white on hover */
 .btn.btn-primary,
