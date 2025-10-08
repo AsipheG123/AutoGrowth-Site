@@ -550,7 +550,7 @@ h2 span {
 
     /* Larger, cleaner logo */
     .navbar .logo img {
-        height: 75px; /* increase or decrease this until it feels right */
+        height: 70px; /* increase or decrease this until it feels right */
         width: auto;
         display: block;
         object-fit: contain;
