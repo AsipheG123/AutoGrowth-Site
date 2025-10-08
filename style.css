@@ -429,13 +429,19 @@ h2 span {
     gap: 15px;
 }
 
+    /* Social icons – size & spacing */
     .social-icons img {
-        width: 30px;
-        height: 30px;
-        background: #006241;
-        padding: 5px;
-        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 0.9;
     }
+
+        .social-icons img:hover {
+            opacity: 1;
+        }
 
 .contact-form {
     flex: 1;
