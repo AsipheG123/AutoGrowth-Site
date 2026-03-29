@@ -1,16 +1,65 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You</title>
+    <title>Thank You - AutoGrowth</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0fdf5;
+            padding: 20px;
+        }
+        .thank-you-content {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .thank-you-content h1 {
+            color: #00b36b;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .thank-you-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #00b36b;
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #008f50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <section class="contact" style="text-align: center; padding: 100px 20px;">
-        <h1>Thank You!</h1>
-        <p>Your message has been received. We'll be in touch in shortly.</p>
-        <a href="index.html" class="btn btn-primary" style="margin-top: 20px;">Back to Home</a>
-    </section>
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <h1>Thank You!</h1>
+            <p>Your message has been received. We'll be in touch within 24 hours to discuss your project.</p>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>
