@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -209,7 +209,8 @@
                     FORM: Submissions are sent to Zapier and forwarded by email.
                     The hidden bot-field acts as a honeypot to filter spam.
                 -->
-                <form name="contact" id="contact-form" class="contact-form" method="POST" action="https://hooks.zapier.com/hooks/catch/25012940/u5v6tgt/" accept-charset="UTF-8">
+                <form name="contact" id="contact-form" class="contact-form" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" accept-charset="UTF-8">
+                    <input type="hidden" name="form-name" value="contact" />
                     <!-- Honeypot — hidden from real users -->
                     <p hidden>
                         <label>
