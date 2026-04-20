@@ -11,6 +11,7 @@ body {
     background-color: #f0fdf5; /* Light mint green */
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -405,13 +406,6 @@ h2 span {
     margin-right: auto;
 }
 
-@media (max-width: 768px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
 .contact-info {
     background: #f7fbf9;
     padding: 30px;
@@ -590,13 +584,6 @@ h2 span {
         object-fit: contain;
     }
 
-/* Slightly smaller on tablets/phones */
-@media (max-width: 768px) {
-    .navbar .logo img {
-        height: 55px;
-    }
-}
-
 /* Make the primary button text white and keep it white on hover */
 .btn.btn-primary,
 .btn.btn-primary:link,
@@ -617,3 +604,308 @@ h2 span {
     border-color: #00a86b;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Responsive: tablet (≤900px) and mobile (≤600px) — desktop rules unchanged  */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    section {
+        padding: 56px 28px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    /* Navbar: logo + CTA on first row; links wrap centered below */
+    .navbar {
+        flex-wrap: wrap;
+        padding: 16px 24px;
+        row-gap: 14px;
+        column-gap: 12px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .navbar > a.btn.btn-primary {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .navbar .logo img {
+        height: 55px;
+    }
+
+    /* Hero: stack text above image (DOM order), full-width image */
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        margin-top: 22px;
+    }
+
+    .hero-image {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 220px;
+        max-height: 360px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* About */
+    .about {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .about img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 320px;
+    }
+
+    .pillars {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 22px;
+    }
+
+    .pillar-box {
+        padding: 18px;
+    }
+
+    /* Services: full-width cards */
+    .service-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .services .card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .services .card img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .services-header {
+        margin-bottom: 28px;
+    }
+
+    .section-intro {
+        margin-bottom: 28px;
+    }
+
+    /* Pricing */
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing .card {
+        width: 100%;
+        max-width: 420px;
+        min-width: 0;
+    }
+
+    .pricing .card.highlighted:hover,
+    .pricing .card:hover {
+        transform: none;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-info {
+        padding: 24px;
+    }
+
+    .contact-form textarea {
+        min-height: 140px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 28px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 28px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 40px 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .services h2 {
+        font-size: 26px;
+    }
+
+    .pricing-title {
+        font-size: 24px;
+    }
+
+    /* Navbar: comfortable tap targets; optional full-width CTA row */
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .navbar .logo img {
+        height: 48px;
+    }
+
+    .nav-links {
+        gap: 8px 14px;
+        font-size: 0.95rem;
+    }
+
+    .navbar > a.btn.btn-primary {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .hero-image img {
+        min-height: 200px;
+        max-height: 280px;
+        border-radius: 10px;
+    }
+
+    .about {
+        gap: 22px;
+    }
+
+    .pillar-box {
+        padding: 16px;
+    }
+
+    .service-cards {
+        gap: 22px;
+    }
+
+    .services .card {
+        padding: 22px;
+    }
+
+    .pricing-cards {
+        gap: 22px;
+    }
+
+    .pricing .card {
+        padding: 24px 20px;
+    }
+
+    .price {
+        font-size: 1.75rem;
+    }
+
+    .pricing .card .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-heading {
+        text-align: left;
+    }
+
+    .contact-info {
+        padding: 20px 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px; /* avoids iOS zoom on focus */
+    }
+
+    .contact-form textarea {
+        min-height: 160px;
+    }
+
+    .footer {
+        padding: 32px 18px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 24px;
+        margin-top: 24px;
+    }
+}
